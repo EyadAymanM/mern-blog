@@ -22,7 +22,7 @@ export default function Header() {
         </span>
         Blog
       </Link>
-      <form>
+      <form className="hidden lg:inline">
         <TextInput
           type="text"
           placeholder="Search..."
@@ -37,12 +37,12 @@ export default function Header() {
           <FaMoon />
         </Button>
         <Link to="/sign-in">
-          <Button gradientDuoTone='purpleToBlue'>
+          <Button gradientDuoTone='purpleToBlue' outline>
             Sign In
           </Button>
         </Link>
-      </div>
         <Navbar.Toggle/>
+      </div>
         <Navbar.Collapse>
           <Navbar.Link active={path === '/'} as={'div'}>
             <Link to='./'>Home</Link>
